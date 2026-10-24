@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram name="P05 ERD Fisik KOPMA" id="p05erd">
+    <mxGraphModel dx="1670" dy="937" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;" value="ERD FISIK DATABASE KOPMA_039" vertex="1">
+          <mxGeometry height="40" width="560" x="520" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="petugas" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#3b78b4;fontSize=14;verticalAlign=top;" value="&lt;b&gt;PETUGAS&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_petugas&lt;/td&gt;&lt;td&gt;SMALLINT(6)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;UQ&lt;/b&gt;&lt;/td&gt;&lt;td&gt;kode_petugas&lt;/td&gt;&lt;td&gt;CHAR(3)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;nama_petugas&lt;/td&gt;&lt;td&gt;VARCHAR(100)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;peran_petugas&lt;/td&gt;&lt;td&gt;ENUM&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="190" width="340" x="160" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="anggota" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#4a934a;fontSize=14;verticalAlign=top;" value="&lt;b&gt;ANGGOTA&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_anggota&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;UQ&lt;/b&gt;&lt;/td&gt;&lt;td&gt;no_anggota&lt;/td&gt;&lt;td&gt;CHAR(6)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;UQ&lt;/b&gt;&lt;/td&gt;&lt;td&gt;nim_anggota&lt;/td&gt;&lt;td&gt;CHAR(10)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;nama_anggota&lt;/td&gt;&lt;td&gt;VARCHAR(100)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;prodi_anggota&lt;/td&gt;&lt;td&gt;VARCHAR(60)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;no_hp_anggota&lt;/td&gt;&lt;td&gt;VARCHAR(15)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;status_anggota&lt;/td&gt;&lt;td&gt;ENUM&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;tgl_daftar_anggota&lt;/td&gt;&lt;td&gt;DATE&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="250" width="300" x="660" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pemasok" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#6f42a5;fontSize=14;verticalAlign=top;" value="&lt;b&gt;PEMASOK&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_pemasok&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;nama_pemasok&lt;/td&gt;&lt;td&gt;VARCHAR(100)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;telepon_pemasok&lt;/td&gt;&lt;td&gt;VARCHAR(15)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;alamat_pemasok&lt;/td&gt;&lt;td&gt;VARCHAR(200)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="190" width="340" x="1120" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="penjualan" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;verticalAlign=top;" value="&lt;b&gt;PENJUALAN&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_penjualan&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;UQ&lt;/b&gt;&lt;/td&gt;&lt;td&gt;no_nota_penjualan&lt;/td&gt;&lt;td&gt;CHAR(12)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;tgl_penjualan&lt;/td&gt;&lt;td&gt;DATETIME&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_petugas&lt;/td&gt;&lt;td&gt;SMALLINT(6)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_anggota&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;bayar_penjualan&lt;/td&gt;&lt;td&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="220" width="360" x="390" y="428" as="geometry" />
+        </mxCell>
+        <mxCell id="pembelian" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;verticalAlign=top;" value="&lt;b&gt;PEMBELIAN&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_pembelian&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;no_faktur_pembelian&lt;/td&gt;&lt;td&gt;VARCHAR(20)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;tgl_pembelian&lt;/td&gt;&lt;td&gt;DATE&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;FK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_pemasok&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;status_pembelian&lt;/td&gt;&lt;td&gt;ENUM&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="210" width="360" x="890" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="detail_penjualan" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#008c8c;fontSize=14;verticalAlign=top;" value="&lt;b&gt;DETAIL_PENJUALAN&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_penjualan&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_barang&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;qty_detail_penjualan&lt;/td&gt;&lt;td&gt;SMALLINT(6)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;harga_satuan_detail_penjualan&lt;/td&gt;&lt;td&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="190" width="400" x="170" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="detail_pembelian" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d9eaf7;strokeColor=#3b78b4;fontSize=14;verticalAlign=top;" value="&lt;b&gt;DETAIL_PEMBELIAN&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_pembelian&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK, FK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_barang&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;qty_detail_pembelian&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;harga_beli_detail_pembelian&lt;/td&gt;&lt;td&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="190" width="400" x="1130" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="barang" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#6f42a5;fontSize=14;verticalAlign=top;" value="&lt;b&gt;BARANG&lt;/b&gt;&lt;hr&gt;&lt;table cellpadding=&#39;4&#39; style=&#39;font-size:14px&#39;&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;PK&lt;/b&gt;&lt;/td&gt;&lt;td&gt;id_barang&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;b&gt;UQ&lt;/b&gt;&lt;/td&gt;&lt;td&gt;kode_barang&lt;/td&gt;&lt;td&gt;VARCHAR(10)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;nama_barang&lt;/td&gt;&lt;td&gt;VARCHAR(100)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;kategori_barang&lt;/td&gt;&lt;td&gt;ENUM&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;harga_jual_barang&lt;/td&gt;&lt;td&gt;DECIMAL(12,2)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;stok_barang&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;           &lt;tr&gt;&lt;/td&gt;&lt;td&gt;stok_min_barang&lt;/td&gt;&lt;td&gt;INT(11)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="230" width="360" x="675" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="petugas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;strokeWidth=2;" target="penjualan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="anggota" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;strokeWidth=2;" target="penjualan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="penjualan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;strokeWidth=2;" target="detail_penjualan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;strokeWidth=2;" target="detail_penjualan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="pemasok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;strokeWidth=2;" target="pembelian">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="pembelian" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;strokeWidth=2;" target="detail_pembelian">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="barang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;strokeWidth=2;" target="detail_pembelian">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="1" vertex="1">
+          <mxGeometry height="25" width="30" x="310" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="N" vertex="1">
+          <mxGeometry height="25" width="30" x="580" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="1" vertex="1">
+          <mxGeometry height="25" width="30" x="785" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="N" vertex="1">
+          <mxGeometry height="25" width="30" x="820" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="1" vertex="1">
+          <mxGeometry height="25" width="30" x="540" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="N" vertex="1">
+          <mxGeometry height="25" width="30" x="380" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="1" vertex="1">
+          <mxGeometry height="25" width="30" x="580" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="N" vertex="1">
+          <mxGeometry height="25" width="30" x="645" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="N" vertex="1">
+          <mxGeometry height="25" width="30" x="1110" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="N" vertex="1">
+          <mxGeometry height="25" width="30" x="1050" y="403" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="1" vertex="1">
+          <mxGeometry height="25" width="30" x="1300" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="1" vertex="1">
+          <mxGeometry height="25" width="30" x="1050" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="N" vertex="1">
+          <mxGeometry height="25" width="30" x="1300" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" value="1" vertex="1">
+          <mxGeometry height="25" width="30" x="1050" y="810" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
