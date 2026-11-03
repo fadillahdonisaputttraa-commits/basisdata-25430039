@@ -1,5 +1,6 @@
 -- P05 DDL KOPMA
 -- NPM: 25430039
+-- Struktur database untuk Modul 5 dan Modul 6
 
 CREATE DATABASE IF NOT EXISTS kopma_039
 CHARACTER SET utf8mb4
@@ -21,6 +22,7 @@ DROP TABLE IF EXISTS pemasok;
 CREATE TABLE petugas (
     kode_petugas VARCHAR(10) NOT NULL,
     nama_petugas VARCHAR(100) NOT NULL,
+    peran_petugas ENUM('kasir','gudang','ketua') NOT NULL DEFAULT 'kasir',
     PRIMARY KEY (kode_petugas)
 );
 
@@ -28,6 +30,8 @@ CREATE TABLE petugas (
 CREATE TABLE anggota (
     no_anggota VARCHAR(10) NOT NULL,
     nama_anggota VARCHAR(100) NOT NULL,
+    status_anggota ENUM('aktif','nonaktif') NOT NULL DEFAULT 'aktif',
+    tanggal_daftar DATE NOT NULL DEFAULT '2026-01-01',
     PRIMARY KEY (no_anggota)
 );
 
@@ -35,6 +39,10 @@ CREATE TABLE anggota (
 CREATE TABLE barang (
     kode_barang VARCHAR(10) NOT NULL,
     nama_barang VARCHAR(100) NOT NULL,
+    kategori_barang VARCHAR(30),
+    harga_jual_barang DECIMAL(12,2) NOT NULL DEFAULT 0,
+    stok_barang INT NOT NULL DEFAULT 0,
+    stok_min_barang INT NOT NULL DEFAULT 0,
     PRIMARY KEY (kode_barang)
 );
 
@@ -50,9 +58,10 @@ CREATE TABLE pemasok (
 -- Tabel PENJUALAN
 CREATE TABLE penjualan (
     no_nota_penjualan VARCHAR(20) NOT NULL,
-    tgl_penjualan DATE NOT NULL,
+    tgl_penjualan DATETIME NOT NULL,
     kode_petugas VARCHAR(10) NOT NULL,
     no_anggota VARCHAR(10),
+    bayar_penjualan DECIMAL(12,2) NOT NULL DEFAULT 0,
     PRIMARY KEY (no_nota_penjualan),
 
     CONSTRAINT fk_penjualan_petugas
@@ -77,7 +86,8 @@ CREATE TABLE detail_penjualan (
 
     CONSTRAINT fk_detail_penjualan_nota
         FOREIGN KEY (no_nota_penjualan)
-        REFERENCES penjualan(no_nota_penjualan),
+        REFERENCES penjualan(no_nota_penjualan)
+        ON DELETE CASCADE,
 
     CONSTRAINT fk_detail_penjualan_barang
         FOREIGN KEY (kode_barang)
@@ -87,7 +97,7 @@ CREATE TABLE detail_penjualan (
 -- Tabel PEMBELIAN
 CREATE TABLE pembelian (
     no_nota_pembelian VARCHAR(20) NOT NULL,
-    tgl_pembelian DATE NOT NULL,
+    tgl_pembelian DATETIME NOT NULL,
     kode_petugas VARCHAR(10) NOT NULL,
     kode_pemasok VARCHAR(10) NOT NULL,
     PRIMARY KEY (no_nota_pembelian),
